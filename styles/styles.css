@@ -105,13 +105,35 @@ form {
 	padding: 5px;
 }
 
-.search-bar:hover {
+.search-button {
+	display: flex;
+}
+input[value="Google Search"] {
+	margin-right: 5px;
+}
+input[value="I'm Feeling Lucky"] {
+	margin-left: 5px;
+}
+.search-bar:hover{
 	box-shadow: 0 1px 5px #0000004d;
 }
 
-.search-button > input:hover {
+.search-button > input:hover , .lucky-button > input:hover{
 	border: 0.5px solid #DFE1E5;
 	box-shadow: 0 0.5px 2px #0000004d;
+}
+
+.lucky-button > input{
+	border: none;
+	border-radius: 4px;
+	background-color: #F8F9FA;
+	width: 140px;
+	height: 36px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #3c4043;
+	margin: 10px;
+	padding: 5px;
 }
 
 .location {
