@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdown_extras %}
+
+{% block title %}
+    {% if entry == None %}
+		Page Not Found
+	{% else %}
+		{{title}} - Encyclopedia
+	{% endif %}
+{% endblock %}
+
+{% block body %}
+	{% if entry == None %}
+		<h1 style="font-size:50px; text-align:center;"><strong>Page '{{ title }}'</strong> Not Found</h1>
+	{% else %}
+		{{ entry| markdown |safe }}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+	Create New Page
+{% endblock %}
+
+{% block body %}
+	<h2>Create New Page</h2>
+	<form class="create-page" method="post">
+		<input type="text" maxlength="100" minlength="1" placeholder="Encyclopedia Title" required>
+		<textarea name="" id="" cols="30" rows="10" placeholder="Encyclopedia Content" required></textarea>
+		<input type="submit" value="SAVE">
+	</form>
+{% endblock %}
