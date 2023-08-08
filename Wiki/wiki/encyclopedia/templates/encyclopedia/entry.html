@@ -10,9 +10,13 @@
 {% endblock %}
 
 {% block body %}
+	<h1 class="title">{{ title }}</h1>
 	{% if entry == None %}
 		<h1 style="font-size:50px; text-align:center;"><strong>Page '{{ title }}'</strong> Not Found</h1>
 	{% else %}
-		{{ entry| markdown |safe }}
+		<dev class="entry">
+			<a href="{% url 'edit' title %}">Edit</a>
+			{{ entry| markdown |safe }}
+		</dev>
 	{% endif %}
 {% endblock %}

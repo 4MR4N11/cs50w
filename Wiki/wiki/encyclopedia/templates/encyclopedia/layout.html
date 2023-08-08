@@ -10,8 +10,8 @@
     </head>
     <body>
         <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
+            <div class="sidebar col-lg-2 col-md-3 ml-2">
+                <h2 class="logo">Wiki</h2>
                 {%block form%}
 				{%endblock%}
                 <div>
@@ -21,7 +21,7 @@
                     <a href="{% url 'create' %}">Create New Page</a>
                 </div>
                 <div>
-                    Random Page
+                    <a href="{% url 'random' %}">Random Page</a>
                 </div>
                 {% block nav %}
                 {% endblock %}
